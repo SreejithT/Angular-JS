@@ -1,0 +1,15 @@
+
+<div style="position: absolute;background-color: royalblue;left: 40%;top: 30%;height: 500px;width: 400px;">
+<input type="text" (input)="value1=$event.target.value" value="{{value1}}">
+{{value1}}<br>
+<input type="text" (input)="value2=$event.target.value" value="{{value2}}">
+{{value2}}<br>
+
+<input type="text" (input)="result=$event.target.value" value="{{result}}">
+{{result}}<br>
+
+<button (click)="add()">+</button>  <!-- event binding - send data from html to component(update component values)
+                                    (click)-event, add()-event handler, $event-represents an object of the corresponding event generated  -->
+
+
+</div>
