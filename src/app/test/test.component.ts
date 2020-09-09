@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
+  colors:string[]=["red","blue","green","yellow"]
 
   constructor() { }
 

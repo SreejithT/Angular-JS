@@ -1,5 +1,31 @@
 <!-- <p>todo works!</p> -->
+<div class="row">
+    <div class="col-sm-6">
 <h3>ToDo List</h3>
 <label for="">Enter the task</label><br>
 <input type="text" (input)="task=$event.target.value" >
 <button (click)="add()">Add</button>
+
+    <p *ngFor="let i of todo">
+    {{i}}<br>
+    <button (click)="delete(i) " >Delete</button>
+    <button (click)="move(i)">Move</button>
+</p>
+</div>
+<div class="col-sm-6">
+    <h3>For Tomorrow</h3>
+    <p *ngFor="let i of tmrw">
+        {{i}}<br>
+        <button (click)="delete2(i)">Delete</button>
+    </p>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
