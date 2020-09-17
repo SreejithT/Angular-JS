@@ -30,7 +30,7 @@ export class CalculatorComponent implements OnInit {
     else if(this.value1!='' && this.operator!=''){
       this.value2=i
     }
-
+   
   }
   setOperator(opr){
     // console.log(i)
@@ -42,6 +42,19 @@ export class CalculatorComponent implements OnInit {
     if(this.operator=='+'){
       this.result=parseInt(this.value1)+parseInt(this.value2)
   }
+  if(this.operator=='-'){
+    this.result=parseInt(this.value1)-parseInt(this.value2)
+}
+if(this.operator=='*'){
+  this.result=parseInt(this.value1)*parseInt(this.value2)
+}
+if(this.operator=='/'){
+  this.result=parseInt(this.value1)/parseInt(this.value2)
+}
+if(this.operator=='clr'){
+  this.value1=''
+  
+}
 }
 
 }

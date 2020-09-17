@@ -1,13 +1,16 @@
 <p>Welcome.........</p>
 
 
-    <div *ngFor="let color of colors" >
+    <div *ngFor="let color of colors"  >
     
         {{color}}
     </div>
-    <select name="" id="">
-        <option *ngFor="let color of colors"  value="">{{color}}</option>
+    <select name="" id="" (click)="choice=$event.target.value">
+        <option *ngFor="let color of colors"  value="{{color}}">{{color}}</option>
     </select>
+
+<p [ngStyle]="{'color':choice}">Color check</p>
+<p [ngClass]="disabled=='true'?'disabledBlue':'activeBlue'">Blue Check</p>
     
-        
+ <!-- <input type="radio" value="">        -->
 

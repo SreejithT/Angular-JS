@@ -1,0 +1,50 @@
+<!-- <p>productentry works!</p> -->
+
+<form action="" class="form-group" #myform="ngForm">
+    <div class="form-group">
+        <label for="">Prod ID</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" #pid="ngModel" [(ngModel)]="model.id" name="id" minlength="3" maxlength="5"required >
+        <!-- <div [hidden]="pid.valid && (pid.untouched || pid.dirty)" class="alert alert-danger"> -->
+        <div *ngIf="pid.invalid && (pid.dirty || pid.touched)"  class="alert alert-danger">
+            ID field can't be empty and should have 3-5 characters  
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Name</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" #pname="ngModel" [(ngModel)]="model.name" name="name" required>
+        <div *ngIf="pname.invalid && (pname.dirty || pname.touched)"  class="alert alert-danger">
+            Name field can't be empty
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Price</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" #pprice="ngModel"   [(ngModel)]="model.price" name="price" required>
+        <div *ngIf="pprice.invalid && (pprice.dirty || pprice.touched)"  class="alert alert-danger">
+            Price field can't be empty
+
+        </div>
+        
+    </div>
+    <div class="form-group">
+        <label for="">Description</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" #pdesc="ngModel" [(ngModel)]="model.description" name="description" required>
+        <div *ngIf="pdesc.invalid && (pdesc.dirty || pdesc.touched)"  class="alert alert-danger">
+            Description field can't be empty
+
+        </div>
+    </div>
+    <button class="btn-primary" [disabled]="myform.invalid" (click)="saveProduct()">Save</button>
+    <button class="btn-primary" (click)="viewProduct()">View</button>
+    
+</form>
+

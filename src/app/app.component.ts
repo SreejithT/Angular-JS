@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {faSpinner,faCoffee} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyApp';
+  spinner=faSpinner;
+  coffee=faCoffee;
 }

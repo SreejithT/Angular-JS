@@ -1,0 +1,48 @@
+<!-- <p>name-editor works!</p> -->
+<!-- <input type="text" [formControl]="name" class="form-control">
+<button>Save</button> -->
+
+<form action="" [formGroup]="studentform">
+    <div class="form-group">
+        <label for="">FirstName</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="form-group">
+        <label for="">LastName</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="lname">
+    </div>
+    <div class="form-group">
+        <label for="">Email</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div formGroupName="address">
+        <div>Address</div>
+        <div class="form-group">
+            <label for="">City</label>
+        </div>
+        <div>
+            <input type="text" class="form-control" formControlName="city">
+        </div>
+        <div class="form-group">
+            <label for="">Street</label>
+        </div>
+        <div>
+            
+            <input type="text" class="form-control" formControlName="street">
+        </div>
+        <div class="form-group">
+            <label for="">Pincode</label>
+        </div>
+        <div>
+            <input type="text" class="form-control" formControlName="pincode">
+        </div>
+
+    </div>
+    <button (click)="register()">Save</button>
+</form>

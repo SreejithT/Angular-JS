@@ -1,0 +1,67 @@
+<!-- <p>store works!</p> -->
+<form action="" [formGroup]="storeForm" (ngSubmit)="register()">
+    <div class="form-group">
+        <label for="">StoreID</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="storeid">
+        <div *ngIf="submitted && f.storeid.errors" class="alert alert-danger" role="alert">
+            <div *ngIf="f.storeid.errors.required">
+                storeid is required
+
+            </div>
+            <div *ngIf="f.storeid.errors.maxlength">
+                maxlength is 3
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Name</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="name">
+        <div *ngIf="submitted && f.name.errors" class="alert alert-danger" role="alert">
+            <div *ngIf="f.name.errors.required">
+                name is required
+
+            </div>
+            <div *ngIf="f.name.errors.pattern">
+                Wrong pattern
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">GST No</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="gstno">
+    </div>
+    <div formGroupName="address">
+        <div>Address</div>
+        <div class="form-group">
+            <label for="">City</label>
+        </div>
+        <div>
+            <input type="text" class="form-control" formControlName="city">
+        </div>
+        <div class="form-group">
+            <label for="">Street</label>
+        </div>
+        <div>
+            
+            <input type="text" class="form-control" formControlName="street">
+        </div>
+        <div class="form-group">
+            <label for="">Pincode</label>
+        </div>
+        <div>
+            <input type="text" class="form-control" formControlName="pincode">
+        </div>
+
+    </div>
+    <button >Save</button>
+    <button (click)="reset()">Reset</button>
+    Form Status{{storeForm.status}}
+</form>
